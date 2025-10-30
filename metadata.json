@@ -1,0 +1,5 @@
+{
+  "name": "DigiNews - News Application",
+  "description": "A modern news application with features like browsing breaking news, discovering articles by category, bookmarking, and AI-powered summarization. Built with React, TypeScript, Tailwind CSS, and Firebase.",
+  "requestFramePermissions": []
+}

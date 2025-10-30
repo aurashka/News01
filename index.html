@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigiNews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#FF3A44',
+              secondary: '#0080FF',
+              darkbg: '#1C1F2E',
+              darkcard: '#2E3241',
+              darktext: '#F5F5F5',
+              lightbg: '#F0F3F6',
+              lightcard: '#FFFFFF',
+              lighttext: '#333333',
+              graytext: '#9E9E9E',
+            }
+          }
+        },
+        plugins: [
+            function({ addUtilities }) {
+                const newUtilities = {
+                    '.scrollbar-hide': {
+                        /* IE and Edge */
+                        '-ms-overflow-style': 'none',
+                        /* Firefox */
+                        'scrollbar-width': 'none',
+                        /* Safari and Chrome */
+                        '&::-webkit-scrollbar': {
+                            display: 'none'
+                        }
+                    }
+                }
+                addUtilities(newUtilities)
+            }
+        ]
+      }
+    </script>
+    <style>
+      body {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.4.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.26.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-lightbg dark:bg-darkbg overflow-hidden">
+    <div id="root" class="h-screen w-screen"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
